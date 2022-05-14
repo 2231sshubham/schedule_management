@@ -34,8 +34,8 @@ Api are defined as :-
 
 | Plugin | README |
 | ------ | ------ |
-| set appointment | [/api/appointment/add][PlDb] |
-| fetch appointment | [/api/user_appointment/appointments][PlGh] |
+| set appointment | [/api/appointment/add] |
+| fetch appointment | [/api/user_appointment/appointments] |
 
 ## Swagger
 
