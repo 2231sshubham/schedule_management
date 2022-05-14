@@ -21,7 +21,7 @@ Schedule Management requires [Node.js](https://nodejs.org/) v10+ to run.
 Install the dependencies and devDependencies and start the server.
 
 ```sh
-git clone
+git clone https://github.com/2231sshubham/schedule_management.git
 cd schedule_management
 npm i
 node index.js
