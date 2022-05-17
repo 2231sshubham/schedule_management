@@ -38,7 +38,7 @@ Api are defined as :-
 
 | Plugin | README |
 | ------ | ------ |
-| main route | https://localhost:3000/api/ |
+| main route | http://localhost:3000/api/ |
 | set appointment | /api/appointment/add |
 | fetch appointment | /api/user_appointment/appointments |
 
