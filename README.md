@@ -21,15 +21,15 @@ Schedule Management requires [Node.js](https://nodejs.org/) v10+ to run.
 Install the dependencies and devDependencies and start the server.
 
 ```sh
-git clone
+git clone https://github.com/2231sshubham/schedule_management.git
 cd schedule_management
 npm i
-node index.js
 ```
 - Create a local Database named "schedule_management" in your psql connection.
 - Run the following command after creating the DB successfully to create modes/tables.
 ```sh
 sequelize db:migrate
+node index.js
 ```
 
 ## Plugins
@@ -38,8 +38,9 @@ Api are defined as :-
 
 | Plugin | README |
 | ------ | ------ |
-| set appointment | [/api/appointment/add][PlDb] |
-| fetch appointment | [/api/user_appointment/appointments][PlGh] |
+| main route | http://localhost:3000/api/ |
+| set appointment | /api/appointment/add |
+| fetch appointment | /api/user_appointment/appointments |
 
 ## Swagger
 
