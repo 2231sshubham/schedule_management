@@ -28,7 +28,6 @@ node index.js
 ```
 - Create a local Database named "schedule_management" in your psql connection.
 - Run the following command after creating the DB successfully to create modes/tables.
-- 
 ```sh
 sequelize db:migrate
 ```
