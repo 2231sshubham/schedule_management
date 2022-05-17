@@ -25,7 +25,6 @@ async function distinct_users(users,from){
 
         if (appointments) {
             appointments.forEach(appointment => {
-                console.log(appointment);
                 if (appointment.appointment.from <= from && appointment.appointment.to >= from) {
                     flag = 0
                 }
