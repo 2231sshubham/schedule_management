@@ -28,6 +28,7 @@ node index.js
 ```
 - Create a local Database named "schedule_management" in your psql connection.
 - Run the following command after creating the DB successfully to create modes/tables.
+- 
 ```sh
 sequelize db:migrate
 ```
@@ -38,8 +39,9 @@ Api are defined as :-
 
 | Plugin | README |
 | ------ | ------ |
-| set appointment | [/api/appointment/add][PlDb] |
-| fetch appointment | [/api/user_appointment/appointments][PlGh] |
+| main route | https://localhost:3000/api/ |
+| set appointment | /api/appointment/add |
+| fetch appointment | /api/user_appointment/appointments |
 
 ## Swagger
 
