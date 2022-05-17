@@ -24,13 +24,13 @@ Install the dependencies and devDependencies and start the server.
 git clone https://github.com/2231sshubham/schedule_management.git
 cd schedule_management
 npm i
-node index.js
 ```
 - Create a local Database named "schedule_management" in your psql connection.
 - Run the following command after creating the DB successfully to create modes/tables.
 - 
 ```sh
 sequelize db:migrate
+node index.js
 ```
 
 ## Plugins
