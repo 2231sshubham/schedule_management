@@ -5,6 +5,9 @@ let unavailable_users = []
 
 async function distinct_users(users,from){
 
+    available_users = []
+    unavailable_users = []
+
     for await (let user of users) {
         const appointments = await User_appointments.findAll({
             where: {

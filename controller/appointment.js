@@ -49,31 +49,43 @@ async function add (params = {}) {
             return { message: "Failed, slot not available"}
         }
 
-        //  Else create appointment for the slot and room provided
-
-        const appointment = await Appointments.create({from,to,roomNo})
-        const { appointment_id } = appointment
-
-
 
         // If not failed, checking which users are available during the time slot distinguished as 'available_users' and 'unavailable_users' 
         
         const { available_users, unavailable_users} = await distinct_users(users,from)
 
 
+        let appointment_id
 
         // If no user free, return failed status
 
         if(available_users.length === 0)
             return ({message:"Failed, no user free for the slot"})
 
-        // Else create User_appointment entry for every user against the appointment created earlier
+        //  Else create appointment for the slot and room provided
+        else {
+            
+
+            const appointment = await Appointments.create({
+                from,
+                to,
+                roomNo
+            })
+            const {
+                appointment_id
+            } = appointment
+
+            global.appointment_id = appointment_id
+
+        }
+
+        // And create User_appointment entry for every user against the appointment created earlier
 
         for await (let available_user of available_users) {
 
             const userAppointment = await User_appointments.create({
                 user_name: available_user,
-                appointment_id
+                appointment_id: global.appointment_id
             })
             appointments.push(userAppointment)
         };
